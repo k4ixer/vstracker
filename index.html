@@ -17,6 +17,7 @@
   <label for="fileInput" class="file-label">Importar</label>
   <input type="file" id="fileInput" accept=".json" onchange="importar(event)" class="file-input">
 </div>
+
     <hr>
 
     <h3>Lista de Servicios:</h3>
@@ -34,23 +35,22 @@
   </div>
 
   <!-- Diálogo oculto para crear servicio -->
-  <dialog id="dialogo-servicio">
-    <form method="dialog" id="formulario-servicio">
-      <label for="nuevo-servicio">Servicio:</label>
-      <input id="nuevo-servicio" type="text" placeholder="Nombre del servicio" required>
+<dialog id="dialogo-servicio">
+  <form method="dialog" id="formulario-servicio">
+    <label for="nuevo-servicio">Servicio:</label>
+    <input id="nuevo-servicio" type="text" placeholder="Nombre del servicio" required>
 
-      <label for="nueva-version">Versión:</label>
-      <input id="nueva-version" type="text" placeholder="Versión del servicio" required>
+    <label for="nueva-version">Versión:</label>
+    <input id="nueva-version" type="text" placeholder="Versión del servicio" required>
 
-        <dialog>
-            <div class="dialog-buttons">
-                <button>Botón 1</button>
-                <button>Botón 2</button>
-            </div>
-        </dialog>
+    <!-- Botón de Crear dentro del formulario -->
+    <div class="dialog-buttons">
+      <button type="submit">Crear</button>
+      <button type="button" onclick="cerrarDialogo()">Cancelar</button>
+    </div>
+  </form>
+</dialog>
 
-    </form>
-  </dialog>
   
   <!-- Diálogo de edición -->
 <dialog id="dialogo-editar">
