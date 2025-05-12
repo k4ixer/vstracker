@@ -1,0 +1,356 @@
+/* General */
+body {
+  font-family: 'Roboto', Arial, sans-serif; 
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border: 2px solid #333;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+h2 {
+  text-align: center;
+  color: #e0e0e0;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid #444;
+  background-color: #333;
+  color: #e0e0e0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+}
+
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Buttons */
+.dialog-buttons {
+  display: flex; /* Establece el contenedor como un contenedor flex */
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 10px; /* Opcional: agrega espacio entre los botones */
+  padding-top: 10px; /* Opcional: agrega un poco de espacio arriba */
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #2e7d32;
+  color: #ccc;
+  border: 1px solid #2e7d32;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Esto centra los botones horizontalmente */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el botón de archivo */
+input[type="file"] {
+  background-color: #2e7d32; /* Mismo color de fondo que los botones */
+  color: #ccc; /* Mismo color de texto que los botones */
+  padding: 6px 12px;
+  border: 1px solid #2e7d32; /* Mismo color de borde que los botones */
+  border-radius: 3px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="file"]:hover {
+  background-color: #388e3c; /* Mismo color de fondo al pasar el mouse */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="file"]:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 14px;
+  text-align: left;
+  border: 2px solid #444;
+}
+
+th {
+  background-color: #333;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+  color: #e0e0e0;
+}
+
+td {
+  background-color: #444;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+  color: #e0e0e0;
+}
+
+td span {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-left: 5px;
+  background-color: #555;
+  transition: background-color 0.3s;
+}
+
+td span:hover {
+  background-color: #666;
+}
+
+td span:active {
+  background-color: #777;
+}
+
+tr:hover {
+  background-color: #555;
+}
+
+hr {
+  border: 1px solid #444;
+  margin: 20px 0;
+  width: 100%;
+}
+
+/* Media Queries - Responsive design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2em;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+dialog {
+  background-color: #222;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  padding: 20px;
+  color: #e0e0e0;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#formulario-servicio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dialog-buttons button {
+  flex: 1;
+}
+
+/* Estilo específico para íconos de acción */
+td span {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-left: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover: resalta el botón */
+td span:hover {
+  background-color: #3a3a3a;
+  border-color: #4CAF50;
+  box-shadow: 2px 2px 10px rgba(76, 175, 80, 0.4);
+  transform: scale(1.05);
+}
+
+/* Activo: estilo de clic */
+td span:active {
+  background-color: #555;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.6);
+  transform: scale(0.97);
+}
+
+dialog h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+dialog p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+}
+
+dialog input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+}
+
+dialog input[type="text"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+  background-color: #444;
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #2e7d32;
+  color: #ccc;
+  border: 1px solid #2e7d32;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+/* Estilo para el input de tipo file personalizado */
+.file-input {
+  display: none; /* Oculta el input de tipo file original */
+}
+
+.file-label {
+  background-color: #2e7d32; /* Mismo color que los botones */
+  color: #ccc; /* Mismo color de texto que los botones */
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Roboto', Arial, sans-serif; /* Fuente más legible */
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.file-label:hover {
+  background-color: #388e3c; /* Mismo color de fondo al pasar el mouse */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.file-label:active {
+  box-shadow: none;
+  transform: translateY(1px);
+}

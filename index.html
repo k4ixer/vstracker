@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>VS tracker</h2>
+
+    <div class="buttons-container">
+  <button onclick="abrirDialogo()">Crear</button>
+  <button onclick="exportar()">Exportar</button>
+  <!-- Estilizamos el input de tipo file como un botón -->
+  <label for="fileInput" class="file-label">Importar</label>
+  <input type="file" id="fileInput" accept=".json" onchange="importar(event)" class="file-input">
+</div>
+    <hr>
+
+    <h3>Lista de Servicios:</h3>
+
+    <table id="tabla-servicios">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Versión</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="lista"></tbody>
+    </table>
+  </div>
+
+  <!-- Diálogo oculto para crear servicio -->
+  <dialog id="dialogo-servicio">
+    <form method="dialog" id="formulario-servicio">
+      <label for="nuevo-servicio">Servicio:</label>
+      <input id="nuevo-servicio" type="text" placeholder="Nombre del servicio" required>
+
+      <label for="nueva-version">Versión:</label>
+      <input id="nueva-version" type="text" placeholder="Versión del servicio" required>
+
+        <dialog>
+            <div class="dialog-buttons">
+                <button>Botón 1</button>
+                <button>Botón 2</button>
+            </div>
+        </dialog>
+
+    </form>
+  </dialog>
+  
+  <!-- Diálogo de edición -->
+<dialog id="dialogo-editar">
+  <form method="dialog" id="form-editar">
+    <h4>Editar versión</h4>
+    <p id="nombre-servicio-editar"></p>
+    <input type="text" id="input-editar-version" required>
+    <div class="dialog-buttons">
+      <button type="submit">Guardar</button>
+      <button type="button" onclick="cerrarDialogoEditar()">Cancelar</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Diálogo de confirmación de borrado -->
+<dialog id="dialogo-borrar">
+  <form method="dialog" id="form-borrar">
+    <h4>Confirmar eliminación</h4>
+    <p id="mensaje-borrar"></p>
+    <div class="dialog-buttons">
+      <button type="submit">Sí, borrar</button>
+      <button type="button" onclick="cerrarDialogoBorrar()">Cancelar</button>
+    </div>
+  </form>
+</dialog>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
