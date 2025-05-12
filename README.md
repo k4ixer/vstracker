@@ -1,2 +1,2 @@
-# vstracker.github.io
-In development
+# ⚠️ VS tracker
+La web esta en desarrollo
